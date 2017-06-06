@@ -1,0 +1,22 @@
+{
+  "name": "test1",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "authors": [
+    "xianmeng <924985774@qq.com>"
+  ],
+  "dependencies": {
+    "dropload": "https://github.com/ximan/dropload.git#^0.9.1",
+    "amazeui": "^2.7.2",
+    "sweetalert": "^1.1.3"
+  }
+}

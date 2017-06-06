@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>买单返商户版</title>
+    <link rel="stylesheet" href="lib/amazeui/dist/css/amazeui.min.css">
+    <link rel="stylesheet" href="lib/sweetalert/dist/sweetalert.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="lib/dropload/dist/dropload.css">
+</head>
+<body>
+<!--买单反logo开始-->
+<div class="nav am-g">
+    <h2>
+        <span id="title">商户名</span>
+        <!-- 按钮触发器， 需要指定 target -->
+        <img src="img/setting.png" class="setting" data-am-offcanvas="{target: '#doc-oc-demo2', effect: 'push'}">
+    </h2>
+</div>
+<div class="body">
+    <!-- 侧边栏内容 -->
+    <div id="doc-oc-demo2" class="am-offcanvas">
+        <div class="am-offcanvas-bar">
+            <div class="am-offcanvas-content">
+                <table class="am-table  am-table-hover">
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th>消费即返利，单单返红包</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr style="height: 30px;"></tr>
+                    <tr onclick="onSearchInformation()">
+                        <td style="width: 25px"><img src="img/information.png" class="icon1" alt=""></td>
+                        <td>商家信息</td>
+                        <td><img src="img/arrows.png" class="arrows" alt=""></td>
+                    </tr>
+                    <tr style="height: 6px;"></tr>
+                    <tr onclick="onSearchTodayOrder()">
+                        <td><img src="img/today-order.png" class="icon1" alt=""></td>
+                        <td>今日订单</td>
+                        <td><img src="img/arrows.png" class="arrows" alt=""></td>
+                    </tr>
+                    <tr style="height: 6px;"></tr>
+                    <tr onclick="onSearchOrders()">
+                        <td><img src="img/orders.png" class="icon1" alt=""></td>
+                        <td>订单查询</td>
+                        <td><img src="img/arrows.png" class="arrows" alt=""></td>
+                    </tr>
+                    <tr style="height: 6px;"></tr>
+                    <tr onclick="onChangePassword()">
+                        <td><img src="img/change-password.png" class="icon1" alt=""></td>
+                        <td>修改密码</td>
+                        <td><img src="img/arrows.png" class="arrows" alt=""></td>
+                    </tr>
+                    <tr style="height: 6px;"></tr>
+                    <tr onclick="onExit()">
+                        <td><img src="img/sing-out.png" class="icon1" alt=""></td>
+                        <td>退出登录</td>
+                        <td><img src="img/arrows.png" class="arrows" alt=""></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="tittle"></div>
+    <div>
+        <table class="am-table am-table-striped am-table-hover table " >
+            <tbody id="item">
+
+            </tbody>
+        </table>
+    </div>
+    <div class="footer am-g">
+        <div class="am-u-sm-2">合计</div>
+        <div class="am-u-sm-4 totalItem">总订单：0</div>
+        <div class="am-u-sm-6 totalMoney">总金额：0</div>
+    </div>
+</div>
+<span id="test"></span>
+<!--日期选择插件-->
+<!--页面结束-->
+<!--弹框Alert-->
+<!--弹框Alert-->
+<script src="lib/sweetalert/dist/sweetalert.min.js"></script>
+<!--语音播报-->
+<!--推送-->
+<script src="http://cdn.bootcss.com/socket.io/1.3.7/socket.io.js"></script>
+<script src="lib/jquery/dist/jquery.min.js"></script>
+<script src="lib/amazeui/dist/js/amazeui.min.js"></script>
+<script src="lib/dropload/dist/dropload.min.js"></script>
+<script src="js/index.js"></script>
+<script>
+    function onSearchInformation() {
+        location.href = "templates/information.html";
+    }
+    function onSearchTodayOrder() {
+        location.href = "index.html";
+    }
+    function onSearchOrders() {
+        location.href = "templates/orders.html";
+    }
+    function onChangePassword() {
+        location.href = "templates/change-password.html";
+    }
+    function onExit() {
+        swal({
+                title: "确定退出当前用户？",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                cancelButtonText: "取消",
+                confirmButtonText: "确定",
+                closeOnConfirm: false
+            },
+            function () {
+                swal({
+                    title: '退出成功！',
+                    type: 'success',
+                    confirmButtonText: "确定"
+                });
+                localStorage.clear();
+                setTimeout(function () {
+                    location.href = "templates/login.html";
+                }, 1000);
+
+            });
+    }
+    $(document).ready(function () {
+        var user = localStorage.getItem('tel');
+        var id = localStorage.getItem('mid');
+        if (id == null) {
+            location.href = "templates/login.html";
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="io.maidanfan.shangbuban" version="1.0.1">
+    <name>买单返商户版</name>
+    <description>
+        用于买单返商户观察客户支付详情
+    </description>
+    <author email="924985774@qq.com" href="http://cordova.io">
+        买单返技术部
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+    <platform name="android">
+        <icon src="www/img/icon.png" />
+    </platform>
+    <engine name="android" spec="^5.2.2" />
+    <plugin name="cordova-plugin-whitelist" spec="^1.3.2" />
+</widget>

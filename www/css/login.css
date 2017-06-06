@@ -1,0 +1,60 @@
+
+body{
+  background-color: #f0f0f2;
+}
+.header,.nav{
+display: flex;
+}
+.nav{
+  height:50px;
+  background-color: #f8f8f8;
+  border-bottom: .5px solid lightgrey;
+}
+h2{
+  margin: auto;
+}
+.logo{
+  width: 161px;
+  height: 45px;
+  margin: 70px auto 0;
+}
+.password1{
+  margin-bottom: 0;
+}
+img{
+  width: 24px;
+}
+.tittle{
+  font-size: 14px;
+  text-align: center;
+}
+#signForm{
+  margin-top: 75px;
+}
+.countDown{
+  font-size: 14px;
+  text-align: center;
+  height: 37px;
+  line-height: 37px;
+}
+#getCode{
+  outline: none;
+}
+.error{
+  color:red;
+}
+.sweet-alert{
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.sweet-alert button{
+  font-size: 16px;
+  margin: auto;
+}
+.sweet-alert h2{
+  font-size: 18px;
+}
+.sweet-alert .sa-icon{
+  margin: 0 auto;
+}
