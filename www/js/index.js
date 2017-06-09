@@ -11,7 +11,8 @@ $().ready(function () {
         wx_cre: "微信+余额",
         alipay: "支付宝支付",
         ali_chun: "支付宝平台 余额",
-        ali_cre: "支付宝+余额"
+        ali_cre: "支付宝+余额",
+        xcx_wechatpay:"微信支付"
     };
     $('#title').text(user);
     var date = new Date();
