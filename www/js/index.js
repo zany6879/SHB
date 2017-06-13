@@ -12,7 +12,9 @@ $().ready(function () {
         alipay: "支付宝支付",
         ali_chun: "支付宝平台 余额",
         ali_cre: "支付宝+余额",
-        xcx_wechatpay:"微信支付"
+        xcx_wechatpay:"微信支付",
+        xcx_balance:"余额支付",
+        xcx_we_ba:"微信+余额支付"
     };
     $('#title').text(user);
     var date = new Date();
